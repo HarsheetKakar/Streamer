@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <video src="{{url_for('video', id=video.id)}}" width="800" height="400" controls>
+</div>
+{% endblock %}

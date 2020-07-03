@@ -1,0 +1,15 @@
+{% extends "login.html" %}
+
+{% block form_content %}
+<form action="{{url_for('signup')}}" method="POST">
+    <input type="text" id="name" class="fadeIn third" name="name" placeholder="name">
+    <input type="text" id="login" class="fadeIn second" name="email" placeholder="email">
+    <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+    <input type="submit" class="fadeIn fourth" value="Sign Up">
+</form>
+
+<!-- Remind Passowrd -->
+<div id="formFooter">
+    <a class="underlineHover" href="{{url_for('login')}}">Login</a>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for season in show.seasons.all() %}
+        <div class="card col-4" style="width: 18rem;">
+            <img class="card-img-top" src="{{show.thumbnail}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{season.name}}</h5>
+                <button class="btn btn-primary"
+                    onclick="window.location.href=`{{url_for('season', id=season.id)}}`">Videos</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
